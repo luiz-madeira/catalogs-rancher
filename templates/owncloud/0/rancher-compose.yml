@@ -6,7 +6,7 @@ catalog:
     Gerenciados de Arquivos
   minimum_rancher_version: v0.56.0
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
-  uuid: radarr-0
+  uuid: owncloud
 services:
   app-lb:
     scale: 1
