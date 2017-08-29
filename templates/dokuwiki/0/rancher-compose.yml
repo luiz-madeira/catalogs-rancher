@@ -18,7 +18,7 @@ catalog:
       description: "HTTP port to expose on host. Will be used to bind TCP"
       label: "HTTP port:"
       required: true
-      default: 80
+      default: 8080
       type: "string"
       options:
         - local
