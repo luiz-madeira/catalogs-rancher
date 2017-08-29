@@ -1,4 +1,3 @@
-version: '2'
 app-lb:
     ports:
     - ${http_port}:${http_port}/tcp
