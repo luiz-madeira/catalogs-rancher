@@ -1,3 +1,5 @@
+version: '2'
+service:
 app-lb:
       ports:
       - ${http_port}:${http_port}/tcp
