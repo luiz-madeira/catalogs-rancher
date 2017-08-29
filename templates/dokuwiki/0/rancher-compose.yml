@@ -1,12 +1,12 @@
 version: '2'
 catalog:
   name: Dokuwiki
-  version: v0.1-Dokuwiki
+  version: v0.1-dokuwiki
   description: |
     Dokuwiki
   minimum_rancher_version: v0.56.0
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
-  uuid: Dokuwiki-0
+  uuid: dokuwiki-0
   questions:
     - variable: "http_port"
       description: "Porta HTTP que será exposta:"
