@@ -1,0 +1,21 @@
+version: '2'
+services:
+  dokuwiki-server:
+    image: ununseptium/dokuwiki-docker
+    hostname: dw.example.com
+    volumes_from:
+    - dokuwiki-data
+    ports:
+    - ${http_port}:9002/tcp
+    labels:
+      io.rancher.sidekicks: dokuwiki-data
+  dokuwiki-data:
+    image: ununseptium/dokuwiki-docker
+    hostname: dokuwikidata
+    entrypoint:
+    - /bin/true
+    volumes:
+    - /var/www/html/data
+    - /var/www/html/lib/plugins
+    labels:
+      io.rancher.container.start_once: 'true'
