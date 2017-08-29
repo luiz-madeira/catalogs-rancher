@@ -1,5 +1,5 @@
-# catalogs-rancher-dirceusilva
-Catálogo para o Rancher - criado e mantido por http://dirceusilva.com
+# catalogs-rancher-
+Catálogo para o Rancher - criado e mantido por Madeiroviskk
 
 
 # Objetivo:
