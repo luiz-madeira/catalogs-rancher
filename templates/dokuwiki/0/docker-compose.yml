@@ -1,15 +1,17 @@
-app-lb:
-    ports:
-    - ${http_port}:${http_port}/tcp
-    labels:
-      io.rancher.loadbalancer.target.dokuwiki: ${dokuwiki_hostname}:${http_port}=80
-    tty: true
-    image: bitnami/dokuwiki:latest
-    links:
-    - dokuwiki:dokuwiki
-    stdin_open: true
-dokuwiki:
-    labels:
-      io.rancher.container.pull_image: always
-    tty: true
-    image: bitnami/dokuwiki:latest
+version: '2'
+services:
+    app-lb:
+        ports:
+        - ${http_port}:${http_port}/tcp
+        labels:
+          io.rancher.loadbalancer.target.dokuwiki: ${dokuwiki_hostname}:${http_port}=80
+        tty: true
+        image: bitnami/dokuwiki:latest
+        links:
+        - dokuwiki:dokuwiki
+        stdin_open: true
+    dokuwiki:
+        labels:
+          io.rancher.container.pull_image: always
+        tty: true
+        image: bitnami/dokuwiki:latest
