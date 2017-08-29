@@ -1,4 +1,5 @@
 version: '2'
+name: Dokuwiki
 catalog:
   name: Owncloud
   version: v0.1-owncloud
@@ -8,12 +9,18 @@ catalog:
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
   uuid: owncloud-0
   questions:
-    - variable: "http_port"
-      description: "Porta HTTP que será exposta:"
-      label: "Porta HTTP:"
+    - variable: "dokuwiki_hostname"
+      description: "Dokuwiki hostname"
+      label: "Hostname:"
       required: true
-      default: 8080
-      type: "int"
+      default: "dw.example.com"
+      type: "string"
+    - variable: "http_port"
+      description: "HTTP port to expose on host. Will be used to bind TCP"
+      label: "HTTP port:"
+      required: true
+      default: 80
+      type: "string"
       options:
         - local
       
