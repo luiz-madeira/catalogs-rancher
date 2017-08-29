@@ -1,13 +1,20 @@
 version: '2'
 catalog:
   name: Owncloud
-  version: 0.0.1-rancher1
+  version: v0.1-owncloud
   description: |
     Gerenciados de Arquivos
   minimum_rancher_version: v0.56.0
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
-  uuid: owncloud
-services:
+  uuid: owncloud-0
+  questions:
+    - variable: "http_port"
+      description: "Porta HTTP que será exposta:"
+      label: "Porta HTTP:"
+      required: true
+      default: 8080
+      type: "int"
+ services:
   app-lb:
     scale: 1
     start_on_create: true
