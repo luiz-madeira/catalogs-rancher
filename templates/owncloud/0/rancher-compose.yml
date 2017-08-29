@@ -14,6 +14,9 @@ catalog:
       required: true
       default: 8080
       type: "int"
+      options:
+        - local
+      
 services:
   app-lb:
     scale: 1
