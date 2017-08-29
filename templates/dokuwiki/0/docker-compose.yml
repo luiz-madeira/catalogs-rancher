@@ -8,7 +8,7 @@ app-lb:
     links:
     - dokuwiki:dokuwiki
     stdin_open: true
-Dokuwiki:
+dokuwiki:
     labels:
       io.rancher.container.pull_image: always
     tty: true
