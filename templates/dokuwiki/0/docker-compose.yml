@@ -2,9 +2,9 @@ version: '2'
 services:
     app-lb:
         ports:
-        - 9001:9001/tcp
+        - ${http_port}:${http_port}/tcp
         labels:
-          io.rancher.loadbalancer.target.dokuwiki: teste.com.br:9001=80
+          io.rancher.loadbalancer.target.dokuwiki: ${dokuwiki_hostname}:${http_port}=80
         tty: true
         image: bitnami/dokuwiki:latest
         links:
