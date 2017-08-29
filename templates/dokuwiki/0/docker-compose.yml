@@ -7,9 +7,6 @@ services:
           io.rancher.loadbalancer.target.dokuwiki: ${dokuwiki_hostname}:${http_port}=80
         tty: true
         image: bitnami/dokuwiki:latest
-        links:
-        - dokuwiki:dokuwiki
-        stdin_open: true
     dokuwiki:
         labels:
           io.rancher.container.pull_image: always
