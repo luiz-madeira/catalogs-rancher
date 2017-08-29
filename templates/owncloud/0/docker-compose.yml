@@ -2,9 +2,9 @@ version: '2'
 services:
   app-lb:
     ports:
-    - ${http_port}:9001/tcp
+    - ${http_port}:${http_port}/tcp
     labels:
-      io.rancher.loadbalancer.target.owncloud: ${onwcloud_hostname}:9001=80
+      io.rancher.loadbalancer.target.owncloud: ${onwcloud_hostname}:${http_port}=80
     tty: true
     image: rancher/lb-service-haproxy:v0.7.5
     links:
