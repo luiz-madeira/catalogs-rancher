@@ -6,7 +6,7 @@ catalog:
     Dokuwiki
   minimum_rancher_version: v0.56.0
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
-  uuid: owncloud-0
+  uuid: dokuwiki-0
   questions:
     - variable: "dokuwiki_hostname"
       description: "Dokuwiki hostname"
