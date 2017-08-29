@@ -1,9 +1,0 @@
----
-name: Radarr
-description: >
-  Um gerenciador de filmes rápido, fácil e eficiente.
-version: 0.0.1-rancher1
-category: Gerenciadores de conteúdo
-maintainer: Dirceu Silva <contato@dirceusilva.com>
-license: GNU GPL v3
-projectURL: https://github.com/contato318/catalogs-rancher-dirceusilva
