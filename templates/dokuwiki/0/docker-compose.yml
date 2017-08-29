@@ -4,7 +4,7 @@ services:
         ports:
         - ${http_port}:${http_port}/tcp
         labels:
-          io.rancher.loadbalancer.target.dokuwiki: ${dokuwiki_hostname}:${http_port}=80
+          io.rancher.loadbalancer.target.dokuwiki: ${dokuwiki_hostname}:${http_port}=8080
           io.rancher.container.agent.role: environmentAdmin
           io.rancher.container.create_agent: 'true'
         tty: true
