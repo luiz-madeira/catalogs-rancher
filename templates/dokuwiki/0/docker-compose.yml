@@ -2,7 +2,7 @@ app-lb:
       ports:
       - ${http_port}:${http_port}/tcp
       labels:
-        io.rancher.loadbalancer.target.ghost: ${dokuwiki_hostname}:${http_port}=80
+        io.rancher.loadbalancer.target.dokuwiki: ${dokuwiki_hostname}:${http_port}=80
       tty: true
       image: bitnami/dokuwiki:latest
       links:
