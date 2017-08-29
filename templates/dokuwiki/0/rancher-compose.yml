@@ -1,5 +1,4 @@
 version: '2'
-services:
 catalog:
   name: Dokuwiki
   version: v0.1-dokuwiki
@@ -23,16 +22,16 @@ catalog:
       type: "string"
       options:
         - local
-    app-lb:
-      scale: 1
-      load_balancer_config:
-        haproxy_config: {}
-      health_check:
-        port: 42
-        interval: 2000
-        unhealthy_threshold: 3
-        strategy: recreate
-        response_timeout: 2000
-        healthy_threshold: 2
-    dokuwiki:
-      scale: 1
+app-lb:
+  scale: 1
+  load_balancer_config:
+    haproxy_config: {}
+  health_check:
+    port: 42
+    interval: 2000
+    unhealthy_threshold: 3
+    strategy: recreate
+    response_timeout: 2000
+    healthy_threshold: 2
+dokuwiki:
+  scale: 1
