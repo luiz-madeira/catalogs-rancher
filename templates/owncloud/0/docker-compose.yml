@@ -1,15 +1,20 @@
 version: '2'
 services:
   app-lb:
-    image: rancher/lb-service-haproxy:v0.7.5
-    tty: true
     ports:
     - ${http_port}:9001/tcp
     labels:
-      io.rancher.container.hostname_override: container_name
-      io.rancher.container.agent.role: environmentAdmin
-      io.rancher.container.create_agent: 'true'
+      io.rancher.loadbalancer.target.owncloud: ${onwcloud_hostname}:9001=80
+    tty: true
+    image: rancher/lb-service-haproxy:v0.7.5
+    links:
+    - owncloud:owncloud
+    - db:db
+      stdin_open: true
   owncloud:
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
     image: owncloud
     links:
     - db:db
@@ -17,3 +22,4 @@ services:
     image: mariadb
     environment:
       MYSQL_ROOT_PASSWORD: password
+ 

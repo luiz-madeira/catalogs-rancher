@@ -8,7 +8,7 @@ catalog:
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
   uuid: owncloud-0
   questions:
-    - variable: "dokuwiki_hostname"
+    - variable: "onwcloud_hostname"
       description: "Dokuwiki hostname"
       label: "Hostname:"
       required: true
