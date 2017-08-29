@@ -12,4 +12,4 @@ dokuwiki:
       labels:
         io.rancher.container.pull_image: always
       tty: true
-      image: dokuwiki
+      image: bitnami/dokuwiki:latest
