@@ -1,28 +1,28 @@
 version: '2'
 services:
-    catalog:
-      name: Dokuwiki
-      version: v0.1-dokuwiki
-      description: |
-        Dokuwiki
-      minimum_rancher_version: v0.56.0
-      maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
-      uuid: dokuwiki-0
-      questions:
-        - variable: "dokuwiki_hostname"
-          description: "Dokuwiki hostname"
-          label: "Hostname:"
-          required: true
-          default: "dw.example.com"
-          type: "string"
-        - variable: "http_port"
-          description: "HTTP port to expose on host. Will be used to bind TCP"
-          label: "HTTP port:"
-          required: true
-          default: 8080
-          type: "string"
-          options:
-            - local
+catalog:
+  name: Dokuwiki
+  version: v0.1-dokuwiki
+  description: |
+    Dokuwiki
+  minimum_rancher_version: v0.56.0
+  maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
+  uuid: dokuwiki-0
+  questions:
+    - variable: "dokuwiki_hostname"
+      description: "Dokuwiki hostname"
+      label: "Hostname:"
+      required: true
+      default: "dw.example.com"
+      type: "string"
+    - variable: "http_port"
+      description: "HTTP port to expose on host. Will be used to bind TCP"
+      label: "HTTP port:"
+      required: true
+      default: 8080
+      type: "string"
+      options:
+        - local
     app-lb:
       scale: 1
       load_balancer_config:
@@ -35,4 +35,4 @@ services:
         response_timeout: 2000
         healthy_threshold: 2
     dokuwiki:
-  scale: 1
+      scale: 1
