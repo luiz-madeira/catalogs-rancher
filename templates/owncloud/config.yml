@@ -1,7 +1,7 @@
 ---
 name: Owncloud
 description: >
-  Um gerenciador de filmes rápido, fácil e eficiente.
+  Repositório de arquivos
 version: 0.0.1-rancher1
 category: Repositório
 maintainer: Luiz Henrique <luiz@madeiracampos.com>
