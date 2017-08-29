@@ -1,4 +1,5 @@
 version: '2'
+services:
 catalog:
   name: Dokuwiki
   version: v0.1-dokuwiki
