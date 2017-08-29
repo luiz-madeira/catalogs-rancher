@@ -10,7 +10,7 @@ services:
         tty: true
         image: bitnami/dokuwiki:latest
         links:
-        - app-lb:dokuwiki
+        - dokuwiki:dokuwiki
         stdin_open: true
     dokuwiki:
         labels:
