@@ -15,10 +15,10 @@ catalog:
       default: 8080
       type: "int"
  
- owncloud:
+  owncloud:
     scale: 1
     start_on_create: true
- db:
+  db:
     scale: 1
     start_on_create: true
     
