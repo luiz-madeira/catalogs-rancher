@@ -1,5 +1,5 @@
-# catalogs-rancher-
-Catálogo para o Rancher - criado e mantido por Madeiroviskk
+# catalogs-rancher
+Catálogo para o Rancher - criado e mantido por luiz@madeiracampos.com
 
 
 # Objetivo:
