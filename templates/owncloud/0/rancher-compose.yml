@@ -1,5 +1,4 @@
 version: '2'
-name: Dokuwiki
 catalog:
   name: Owncloud
   version: v0.1-owncloud
