@@ -1,0 +1,27 @@
+version: '2'
+services:
+  app-lb:
+    ports:
+    - ${http_port}:${http_port}/tcp
+    labels:
+      io.rancher.loadbalancer.target.joomla: ${joomla_hostname}:${http_port}=80
+    tty: true
+    image: rancher/load-balancer-service
+    links:
+    - joomla:joomla
+    stdin_open: true
+  joomla:
+    image: joomla
+    links:
+      - joomladb:mysql
+    ports:
+      - 8080:80    
+    environment:
+      JOOMLA_DB_HOST: ${joomla_dbhostname}
+      JOOMLA_DB_PASSWORD: ${db_password}
+ 
+  joomla:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: ${db_password}
+ 

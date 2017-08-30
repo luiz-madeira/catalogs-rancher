@@ -1,0 +1,58 @@
+version: '2'
+catalog:
+  name: Joomla
+  version: v0.1-joomla
+  description: |
+    CMS
+  minimum_rancher_version: v0.56.0
+  maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
+  uuid: joomla-0
+  questions:
+    - variable: db_hostname
+      description: "Senha para o banco de dados"
+      label: "Password (default: db_hostname)"
+      required: true
+      default: "joomla"
+      type: "string"
+    - variable: db_password
+      description: "Senha para o banco de dados"
+      label: "Password (default: joomla)"
+      required: true
+      default: "joomla"
+      type: "password"
+    - variable: "joomla_hostname"
+      description: "Joomla hostname"
+      label: "Hostname:"
+      required: true
+      default: "dw.example.com"
+      type: "string"
+    - variable: "http_port"
+      description: "HTTP port to expose on host. Will be used to bind TCP"
+      label: "HTTP port:"
+      required: true
+      default: 80
+      type: "string"
+      options:
+        - local
+      
+services:
+  app-lb:
+      scale: 1
+      load_balancer_config:
+        haproxy_config: {}
+      health_check:
+        port: 42
+        interval: 2000
+        unhealthy_threshold: 3
+        strategy: recreate
+        response_timeout: 2000
+        healthy_threshold: 2
+
+  owncloud:
+    scale: 1
+    start_on_create: true
+  db:
+    scale: 1
+    start_on_create: true
+    
+   
