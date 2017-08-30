@@ -15,7 +15,6 @@ services:
     links:
       - joomladb:mysql
     environment:
-      JOOMLA_DB_HOST: ${joomladb}
       JOOMLA_DB_PASSWORD: ${db_password}
  
   joomladb:
