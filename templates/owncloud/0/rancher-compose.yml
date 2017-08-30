@@ -26,8 +26,7 @@ catalog:
       required: true
       default: 80
       type: "string"
-      options:
-        - local
+    
       
 services:
   app-lb:
