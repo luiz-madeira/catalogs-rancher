@@ -17,11 +17,11 @@ services:
     ports:
       - 8181:80    
     environment:
-      JOOMLA_DB_HOST: ${joomla_dbhostname}
+      JOOMLA_DB_HOST: ${joomladb}
       JOOMLA_DB_PASSWORD: ${db_password}
  
   joomladb:
-    image: mysql:5.6
+    image: mariadb
     environment:
       MYSQL_ROOT_PASSWORD: ${db_password}
  
