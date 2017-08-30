@@ -10,7 +10,7 @@ services:
     links:
     - dokuwiki:dokuwiki
     stdin_open: true
-   dokuwiki:
-        image: bitnami/dokuwiki:latest
-        tty: true
+  dokuwiki:
+      image: bitnami/dokuwiki:latest
+      tty: true
         
