@@ -12,8 +12,6 @@ services:
     stdin_open: true
   dokuwiki:
     image: bitnami/dokuwiki:latest
-    ports:
-      - ${http_port}:${http_port}/tcp
     tty: true
     volumes:
       - 'dokuwiki_data:/bitnami'
