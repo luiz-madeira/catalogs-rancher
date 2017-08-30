@@ -15,7 +15,7 @@ services:
     links:
       - joomladb:mysql
     ports:
-      - 8080:80    
+      - 8181:80    
     environment:
       JOOMLA_DB_HOST: ${joomla_dbhostname}
       JOOMLA_DB_PASSWORD: ${db_password}
