@@ -1,6 +1,7 @@
 ---
-name: Dokuwiki
-description: > Dokuwiki
+name: Dokuwiki Teste
+description: > 
+ Dokuwiki
 version: 0.0.1-rancher1-doku
 category: Wiki
 maintainer: Luiz Henrique <luiz@madeiracampos.com>
