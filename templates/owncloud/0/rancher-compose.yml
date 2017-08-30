@@ -1,4 +1,4 @@
-version: '3.1'
+version: '2'
 catalog:
   name: Owncloud
   version: v0.1-owncloud
@@ -8,6 +8,12 @@ catalog:
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
   uuid: owncloud-0
   questions:
+    - variable: db_password
+      description: "Senha para o banco de dados"
+      label: "Password (default: wordpress)"
+      required: true
+      default: "wordpress"
+      type: "password"
     - variable: "onwcloud_hostname"
       description: "Dokuwiki hostname"
       label: "Hostname:"
@@ -25,22 +31,17 @@ catalog:
       
 services:
   app-lb:
-    scale: 1
-    start_on_create: true
-    lb_config:
-      certs: []
-      port_rules:
-      - protocol: http
-        service: owncloud
-        source_port: 7080
-        target_port: 80
-    health_check:
-      healthy_threshold: 2
-      response_timeout: 2000
-      port: 42
-      unhealthy_threshold: 3
-      interval: 2000
-      strategy: recreate 
+      scale: 1
+      load_balancer_config:
+        haproxy_config: {}
+      health_check:
+        port: 42
+        interval: 2000
+        unhealthy_threshold: 3
+        strategy: recreate
+        response_timeout: 2000
+        healthy_threshold: 2
+
   owncloud:
     scale: 1
     start_on_create: true

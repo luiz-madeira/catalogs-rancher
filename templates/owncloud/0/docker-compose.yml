@@ -1,4 +1,4 @@
-version: '3.1'
+version: '2'
 services:
   app-lb:
     ports:
@@ -6,19 +6,17 @@ services:
     labels:
       io.rancher.loadbalancer.target.owncloud: ${onwcloud_hostname}:${http_port}=80
     tty: true
-    image: rancher/lb-service-haproxy:v0.7.5
+    image: rancher/load-balancer-service
     links:
     - owncloud:owncloud
-     stdin_open: true
+    stdin_open: true
   owncloud:
-    labels:
-      io.rancher.container.pull_image: always
-    tty: true
     image: owncloud
     links:
-    - db:db
+      - db:mysql
+     
   db:
     image: mariadb
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: ${db_password}
  
