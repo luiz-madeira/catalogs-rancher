@@ -48,10 +48,10 @@ services:
         response_timeout: 2000
         healthy_threshold: 2
 
-  owncloud:
+  joomla:
     scale: 1
     start_on_create: true
-  db:
+  joomldb:
     scale: 1
     start_on_create: true
     

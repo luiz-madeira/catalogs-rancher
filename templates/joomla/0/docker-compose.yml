@@ -20,7 +20,7 @@ services:
       JOOMLA_DB_HOST: ${joomla_dbhostname}
       JOOMLA_DB_PASSWORD: ${db_password}
  
-  joomla:
+  joomladb:
     image: mariadb
     environment:
       MYSQL_ROOT_PASSWORD: ${db_password}
