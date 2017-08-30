@@ -11,7 +11,7 @@ services:
     - dokuwiki:dokuwiki
     stdin_open: true
   dokuwiki:
-    image: bitnami/dokuwiki:latest
+    image: 'bitnami/dokuwiki:latest'
     tty: true
     volumes:
       - 'dokuwiki_data:/bitnami'
