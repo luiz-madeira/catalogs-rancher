@@ -10,7 +10,7 @@ catalog:
   questions:
     - variable: db_hostname
       description: "Senha para o banco de dados"
-      label: "Password (default: db_hostname)"
+      label: "Nome do Banco"
       required: true
       default: "joomla"
       type: "string"
