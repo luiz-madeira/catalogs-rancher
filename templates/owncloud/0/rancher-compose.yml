@@ -10,12 +10,12 @@ catalog:
   questions:
     - variable: db_password
       description: "Senha para o banco de dados"
-      label: "Password (default: wordpress)"
+      label: "Password (default: owncloud)"
       required: true
-      default: "wordpress"
+      default: "onwcloud"
       type: "password"
     - variable: "onwcloud_hostname"
-      description: "Dokuwiki hostname"
+      description: "Onwcloud hostname"
       label: "Hostname:"
       required: true
       default: "dw.example.com"
