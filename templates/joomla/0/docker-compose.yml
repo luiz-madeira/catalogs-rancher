@@ -14,8 +14,6 @@ services:
     image: joomla
     links:
       - joomladb:mysql
-    ports:
-      - 8181:80    
     environment:
       JOOMLA_DB_HOST: ${joomladb}
       JOOMLA_DB_PASSWORD: ${db_password}
