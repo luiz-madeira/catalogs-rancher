@@ -17,5 +17,5 @@ services:
       - 'dokuwiki_data:/bitnami'
   volumes:
     dokuwiki_data:
-    driver: local
+      driver: local
         
