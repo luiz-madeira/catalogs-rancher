@@ -9,8 +9,7 @@ services:
     image: rancher/lb-service-haproxy:v0.7.5
     links:
     - owncloud:owncloud
-    - db:db
-      stdin_open: true
+          stdin_open: true
   owncloud:
     labels:
       io.rancher.container.pull_image: always
