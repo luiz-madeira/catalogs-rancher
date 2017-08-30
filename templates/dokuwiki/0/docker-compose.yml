@@ -15,7 +15,7 @@ services:
     tty: true
     volumes:
       - 'dokuwiki_data:/bitnami'
-  volumes:
-    dokuwiki_data:
-      driver: local
+volumes:
+  dokuwiki_data:
+    driver: local
         
