@@ -8,7 +8,7 @@ catalog:
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
   uuid: joomla-0
   questions:
-    - variable: db_hostname
+    - variable: "joomladb"
       description: "Senha para o banco de dados"
       label: "Nome do Banco"
       required: true
