@@ -51,7 +51,7 @@ services:
   joomla:
     scale: 1
     start_on_create: true
-  joomldb:
+  joomladb:
     scale: 1
     start_on_create: true
     
