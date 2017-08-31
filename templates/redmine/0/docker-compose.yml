@@ -16,7 +16,7 @@ services:
       REDMINE_DB_MYSQL: ${db_name}
       REDMINE_DB_PASSWORD: ${db_password}
 
-      links:
+     links:
     - db:mysql
      
   db:
