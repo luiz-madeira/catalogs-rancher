@@ -1,0 +1,24 @@
+version: '2'
+services:
+  app-lb:
+    ports:
+    - ${http_port}:${http_port}/tcp
+    labels:
+      io.rancher.loadbalancer.target.redmine: ${redmine_hostname}:${http_port}=80
+    tty: true
+    image: rancher/load-balancer-service
+    links:
+    - owncloud:owncloud
+    stdin_open: true
+  redmine:
+    image: redmine
+    environment:
+      REDMINE_DB_PASSWORD: ${db_password}
+    links:
+      - db:mysql
+     
+  db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: ${db_password}
+ 
