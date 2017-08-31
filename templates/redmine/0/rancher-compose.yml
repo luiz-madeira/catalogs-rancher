@@ -18,7 +18,7 @@ catalog:
       description: "Redmine hostname"
       label: "Hostname:"
       required: true
-      default: "dw.example.com"
+      default: "redmine"
       type: "string"
     - variable: "http_port"
       description: "HTTP port to expose on host. Will be used to bind TCP"
