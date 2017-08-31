@@ -25,7 +25,7 @@ catalog:
       label: "HTTP port:"
       required: true
       default: 80
-      type: "string"
+      type: "int"
    
       
 services:
