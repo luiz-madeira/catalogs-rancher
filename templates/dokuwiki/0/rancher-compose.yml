@@ -3,7 +3,7 @@ catalog:
   name: Dokuwiki
   version: v0.1-dokuwiki
   description: |
-    Dokuwiki
+    Software Utilizado para armazenar documentação.
   minimum_rancher_version: v0.56.0
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
   uuid: dokuwiki-0
