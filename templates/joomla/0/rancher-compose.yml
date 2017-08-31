@@ -3,7 +3,7 @@ catalog:
   name: Joomla
   version: v0.1-joomla
   description: |
-    CMS
+    Sistema ge Gerenciamento de Conteúdo.
   minimum_rancher_version: v0.56.0
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
   uuid: joomla-0

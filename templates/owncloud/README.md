@@ -1,9 +1,10 @@
 # Onwcloud
 
+Software Utilizado para configurar sua própria nuvem privada.
+
 ### Informações:
 
 O ownCloud representa uma forma moderna de trabalhar, porque você pode armazenar tudo o que é importante, encontrar rapidamente qualquer informação e compartilhá-la com outras pessoas em pouco tempo. 
-
 
 ### Uso e utilização:
 
