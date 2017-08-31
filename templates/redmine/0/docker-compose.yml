@@ -14,7 +14,7 @@ services:
     image: redmine
     environment:
       REDMINE_DB_PASSWORD: ${db_password}
-  links:
+    links:
     - redmine:db
      
   db:
