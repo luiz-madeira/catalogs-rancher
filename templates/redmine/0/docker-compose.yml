@@ -14,7 +14,9 @@ services:
     image: redmine
     environment:
       REDMINE_DB_PASSWORD: ${db_password}
-
+  links:
+    - redmine:db
+     
   db:
     image: mariadb
     environment:
