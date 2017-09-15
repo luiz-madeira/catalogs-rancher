@@ -19,7 +19,7 @@ services:
     image: mariadb
     environment:
       MYSQL_ROOT_PASSWORD: ${db_password}	 
-	  MYSQL_DATABASE: ${banco_teampass}
+      MYSQL_DATABASE: ${banco_teampass}
       MYSQL_PASSWORD: ${senha_mysql}
       MYSQL_USER: ${usuario_teampass}
 	  
