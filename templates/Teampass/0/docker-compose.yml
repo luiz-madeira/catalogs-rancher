@@ -23,4 +23,3 @@ services:
       MYSQL_PASSWORD: ${senha_mysql}
       MYSQL_USER: ${usuario_teampass}
 	  
-OBS: Verificar o restart do docker

@@ -3,7 +3,7 @@ catalog:
   name: Teampass
   version: v0.1-teampass
   description: |
-    Ferramente de Guardar Senha
+    Ferramente de Armazenamento de  Senha
   minimum_rancher_version: v0.56.0
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
   uuid: teampass-0
@@ -22,7 +22,7 @@ catalog:
       type: "password"
 	- variable: "banco_teampass"
       description: "Nome do Banco"
-      label: "Nome do Banco)"
+      label: "Nome do Banco"
       required: true
       default: "teampass"
       type: "string"   
