@@ -1,0 +1,68 @@
+version: '2'
+catalog:
+  name: Teampass
+  version: v0.1-teampass
+  description: |
+    Ferramente de Guardar Senha
+  minimum_rancher_version: v0.56.0
+  maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
+  uuid: teampass-0
+  questions:
+    - variable: "teampassdb"
+      description: "Nome do Banco de Dados"
+      label: "Nome do Banco"
+      required: true
+      default: "teampassdb"
+      type: "string"
+    - variable: db_password
+      description: "Senha para o banco de dados"
+      label: "Password (default: teampassmpass)"
+      required: true
+      default: "teampass"
+      type: "password"
+	- variable: "banco_teampass"
+      description: "Nome do Banco"
+      label: "Nome do Banco)"
+      required: true
+      default: "teampass"
+      type: "string"   
+	- variable: "senha_mysql"
+      description: "Senha Usuário Mysql"
+      label: "Senha Banco"
+      required: true
+      default: "teampass"
+      type: "password"   
+    - variable: "teampass_hostname"
+      description: "Teampass Hostname"
+      label: "Hostname:"
+      required: true
+      default: "tm.example.com"
+      type: "string"
+    - variable: "http_port"
+      description: "HTTP port to expose on host. Will be used to bind TCP"
+      label: "HTTP port:"
+      required: true
+      default: 80
+      type: "string"
+      options:
+		- local
+      
+services:
+  app-lb:
+      scale: 1
+      load_balancer_config:
+        haproxy_config: {}
+      health_check:
+        port: 42
+        interval: 2000
+        unhealthy_threshold: 3
+        strategy: recreate
+        response_timeout: 2000
+        healthy_threshold: 2
+
+  teampass:
+    scale: 1
+    start_on_create: true
+  teampassdb:
+    scale: 1
+    start_on_create: true

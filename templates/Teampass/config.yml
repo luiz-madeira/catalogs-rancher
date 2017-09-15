@@ -1,0 +1,9 @@
+---
+name: Teampass
+description: >
+  Gerenciador de Senhas.
+version: v0.1-Teampass
+category: Gerenciador de Senhas
+maintainer: Luiz Henrique <luiz@madeiracampos.com>
+license: GNU GPL v3
+projectURL: https://github.com/luiz-madeira/catalogs-rancher

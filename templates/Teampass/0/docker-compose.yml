@@ -1,0 +1,26 @@
+version: '2'
+services:
+  app-lb:
+    ports:
+    - ${http_port}:${http_port}/http
+    labels:
+      io.rancher.loadbalancer.target.teampass: ${teampass_hostname}:${http_port}=80
+    tty: true
+    image: rancher/load-balancer-service
+    links:
+    - teampass:teampass
+    stdin_open: true
+  teampass:
+    image: teampass/teampass
+    links:
+      - teampassdb:mysql
+     
+  teampassdb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: ${db_password}	 
+	  MYSQL_DATABASE: ${banco_teampass}
+      MYSQL_PASSWORD: ${senha_mysql}
+      MYSQL_USER: ${usuario_teampass}
+	  
+OBS: Verificar o restart do docker
