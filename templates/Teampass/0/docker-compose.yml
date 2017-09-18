@@ -22,4 +22,3 @@ services:
       MYSQL_DATABASE: ${banco_teampass}
       MYSQL_PASSWORD: ${senha_mysql}
       MYSQL_USER: ${usuario_teampass}
-	  
