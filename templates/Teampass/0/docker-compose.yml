@@ -1,4 +1,13 @@
 version: '2'
+volumes:
+    raiz-app-teampass:
+        driver: ${volume_driver}
+        driver_opts:
+            onRemove: retain
+    raiz-bd-teampass:
+        driver: ${volume_driver}
+        driver_opts:
+            onRemove: retain
 services:
   app-lb:
     ports:
@@ -15,7 +24,8 @@ services:
     restart: always
     links:
       - teampassdb:mysql
-
+    volumes:
+         - raiz-app-teampass:/usr/src/teampass  
      
   teampassdb:
     restart: always
@@ -23,5 +33,6 @@ services:
     environment:
         MYSQL_ROOT_PASSWORD: ${db_password}	 
         MYSQL_DATABASE: ${banco_teampass}
-    
+    volumes:
+         - raiz-bd-teampass:/var/lib/mysql    
         
