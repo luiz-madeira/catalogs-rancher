@@ -12,10 +12,12 @@ services:
     stdin_open: true
   teampass:
     image: teampass/teampass
+    restart: always
     links:
       - teampassdb:mysql
      
   teampassdb:
+    restart: always
     image: mariadb
     environment:
         MYSQL_ROOT_PASSWORD: ${db_password}	 
