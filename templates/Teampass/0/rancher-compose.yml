@@ -15,23 +15,17 @@ catalog:
       default: "teampassdb"
       type: "string"
     - variable: db_password
-      description: "Senha para o banco de dados"
+      description: "Senha do Banco de Dados (root)"
       label: "Password (default: teampass)"
       required: true
       default: "teampass"
       type: "password"
     - variable: "banco_teampass"
       description: "Nome do Banco"
-      label: "Nome do Banco"
+      label: "Nome do Banco do Teampass"
       required: true
       default: "teampass"
       type: "string"
-    - variable: "senha_mysql"
-      description: "Senha Usuário Mysql"
-      label: "Senha Banco"
-      required: true
-      default: "teampass"
-      type: "password"   
     - variable: "teampass_hostname"
       description: "Teampass Hostname"
       label: "Hostname:"
