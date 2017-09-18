@@ -3,7 +3,7 @@ catalog:
   name: Teampass
   version: v0.1-teampass
   description: |
-    Ferramente de Armazenamento de  Senha
+    Ferramenta de Armazenamento de  Senha
   minimum_rancher_version: v0.56.0
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
   uuid: teampass-0
@@ -52,7 +52,7 @@ services:
       load_balancer_config:
         haproxy_config: {}
       health_check:
-        port: 43
+        port: 42
         interval: 2000
         unhealthy_threshold: 3
         strategy: recreate
