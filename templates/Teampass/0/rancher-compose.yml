@@ -52,7 +52,7 @@ services:
       load_balancer_config:
         haproxy_config: {}
       health_check:
-        port: 42
+        port: 43
         interval: 2000
         unhealthy_threshold: 3
         strategy: recreate
