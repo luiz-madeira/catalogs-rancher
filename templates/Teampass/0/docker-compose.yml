@@ -4,7 +4,7 @@ services:
     ports:
     - ${http_port}:${http_port}/http
     labels:
-        io.rancher.loadbalancer.target.teampass: ${teampass_hostname}:${http_port}=8081
+      io.rancher.loadbalancer.target.teampass: ${teampass_hostname}:${http_port}=80
     tty: true
     image: rancher/load-balancer-service
     links:
