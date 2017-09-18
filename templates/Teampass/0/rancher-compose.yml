@@ -20,13 +20,13 @@ catalog:
       required: true
       default: "teampass"
       type: "password"
-	- variable: "banco_teampass"
+    - variable: "banco_teampass"
       description: "Nome do Banco"
       label: "Nome do Banco"
       required: true
       default: "teampass"
-      type: "string"   
-	- variable: "senha_mysql"
+      type: "string"
+    - variable: "senha_mysql"
       description: "Senha Usuário Mysql"
       label: "Senha Banco"
       required: true
@@ -44,8 +44,7 @@ catalog:
       required: true
       default: 80
       type: "string"
-      options:
-		- local
+      
       
 services:
   app-lb:
