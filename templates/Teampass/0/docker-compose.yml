@@ -2,9 +2,9 @@ version: '2'
 services:
   app-lb:
     ports:
-    - ${http_port}:${http_port}/tcp
+    - ${http_port}:${http_port}/http
     labels:
-      io.rancher.loadbalancer.target.teampass: ${teampass_hostname}:${http_port}=80
+        io.rancher.loadbalancer.target.teampass: ${teampass_hostname}:${http_port}=80
     tty: true
     image: rancher/load-balancer-service
     links:
