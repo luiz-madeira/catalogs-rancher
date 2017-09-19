@@ -11,7 +11,7 @@ services:
     - teampass:teampass
     stdin_open: true
   teampass:
-    image: dirceusilva/teampass:2.1.26-final-3
+    image: dirceusilva/teampass:2.1.26-RC1
     restart: always
     links:
       - teampassdb:mysql
@@ -20,8 +20,8 @@ services:
     restart: always
     image: mariadb
     environment:
-        MYSQL_ROOT_PASSWORD: ${db_password}	 
+        MYSQL_ROOT_PASSWORD: ${db_password_root}	 
         MYSQL_DATABASE: ${banco_teampass}
-        MYSQL_PASSWORD: ${db_password}
+        MYSQL_PASSWORD: ${db_password_teampass}
         MYSQL_USER: ${teampass_user}
         

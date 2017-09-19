@@ -20,12 +20,18 @@ catalog:
       required: true
       default: "teampassdb"
       type: "string"  
-    - variable: db_password
+    - variable: db_password_root
       description: "Senha do Banco de Dados (root)"
       label: "Password (default: teampass)"
       required: true
       default: "teampass"
       type: "password"
+    - variable: db_password_teampass
+      description: "Senha do Banco de Dados Teampass"
+      label: "Password (default: teampass)"
+      required: true
+      default: "teampass"
+      type: "password"  
     - variable: "banco_teampass"
       description: "Nome do Banco"
       label: "Nome do Banco do Teampass"
