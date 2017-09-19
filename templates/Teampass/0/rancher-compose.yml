@@ -8,12 +8,6 @@ catalog:
   maintainer: "Luiz Henrique <luiz@madeiracampos.com>"
   uuid: teampass-0
   questions:
-    - variable: "teampassdb"
-      description: "Nome do Banco de Dados"
-      label: "Nome do Banco"
-      required: true
-      default: "teampassdb"
-      type: "string"
     - variable: "teampass_user"
       description: "Usuário Teampass Banco"
       label: "Usuário Banco"
