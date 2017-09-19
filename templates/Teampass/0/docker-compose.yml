@@ -22,4 +22,6 @@ services:
     environment:
         MYSQL_ROOT_PASSWORD: ${db_password}	 
         MYSQL_DATABASE: ${banco_teampass}
+        MYSQL_PASSWORD: ${db_password}
+        MYSQL_USER: ${teampass_user}
         
