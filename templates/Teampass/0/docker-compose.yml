@@ -1,38 +1,26 @@
 version: '2'
-volumes:
-    raiz-app-teampass:
-        driver: ${volume_driver}
-        driver_opts:
-            onRemove: retain
-    raiz-bd-teampass:
-        driver: ${volume_driver}
-        driver_opts:
-            onRemove: retain
 services:
   app-lb:
     ports:
     - ${http_port}:${http_port}/tcp
     labels:
       io.rancher.loadbalancer.target.teampass: ${teampass_hostname}:${http_port}=80
+      io.rancher.scheduler.affinity:host_label: server=proxy
     tty: true
     image: rancher/load-balancer-service
     links:
     - teampass:teampass
     stdin_open: true
   teampass:
-    image: teampass/teampass
+    image: dirceusilva/teampass
     restart: always
     links:
       - teampassdb:mysql
-    volumes:
-         - raiz-app-teampass:/usr/src/teampass  
-     
+
   teampassdb:
     restart: always
     image: mariadb
     environment:
         MYSQL_ROOT_PASSWORD: ${db_password}	 
         MYSQL_DATABASE: ${banco_teampass}
-    volumes:
-         - raiz-bd-teampass:/var/lib/mysql    
         
