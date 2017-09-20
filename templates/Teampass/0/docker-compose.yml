@@ -11,7 +11,7 @@ services:
     - teampass:teampass
     stdin_open: true
   teampass:
-    image: dirceusilva/teampass:latest
+    image: teampass/teampass:latest
     restart: always
     links:
       - teampassdb:mysql
