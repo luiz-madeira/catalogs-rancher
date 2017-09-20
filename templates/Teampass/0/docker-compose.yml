@@ -1,4 +1,14 @@
 version: '2'
+volumes:
+    teampass-app:
+        driver: ${volume_driver}
+        driver_opts:
+            onRemove: retain
+    temapass-db:
+        driver: ${volume_driver}
+        driver_opts:
+            onRemove: retain
+            
 services:
   app-lb:
     ports:
@@ -11,10 +21,12 @@ services:
     - teampass:teampass
     stdin_open: true
   teampass:
-    image: teampass/teampass:development
+    image: luizcampos/teampass:2.1.27.7
     restart: always
     links:
       - teampassdb:mysql
+    volumes:
+      - teampass-app:/var/www/html  	 
      
   teampassdb:
     restart: always
@@ -24,4 +36,6 @@ services:
         MYSQL_DATABASE: ${banco_teampass}
         MYSQL_PASSWORD: ${db_password_teampass}
         MYSQL_USER: ${teampass_user}
-        
+    volumes:
+      - teampass-db:/var/lib/mysql 
+     
