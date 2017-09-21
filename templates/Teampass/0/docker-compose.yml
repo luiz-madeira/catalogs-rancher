@@ -21,7 +21,7 @@ services:
     - teampass:teampass
     stdin_open: true
   teampass:
-    image: luizcampos/teampass:2.1.27.7
+    image: teampass/teampass
     restart: always
     links:
       - teampassdb:mysql
