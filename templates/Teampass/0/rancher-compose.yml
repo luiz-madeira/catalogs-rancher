@@ -44,6 +44,15 @@ catalog:
       required: true
       default: 80
       type: "string"
+    - variable: volume_driver
+      description: "Driver/Volume a ser utilizado para a persistência de dados"
+      label: "Volume driver"
+      required: true
+      default: "rancher-nfs"
+      type: enum
+      options:
+        - local
+        - rancher-nfs
 
       
       
